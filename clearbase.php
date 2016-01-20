@@ -2,7 +2,7 @@
 /*
   Plugin Name: Clearbase
   Plugin URI: http://www.unity3software.com/clearbase
-  Description: A powerfully easy framework for Wordpress media 123.
+  Description: A framework for Wordpress media folders
   Version: 1.7.3
   Author: Richard Blythe
   Author URI: http://unity3software.com/richard-blythe
