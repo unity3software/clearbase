@@ -3,10 +3,12 @@
   Plugin Name: Clearbase
   Plugin URI: http://www.unity3software.com/clearbase
   Description: A framework for Wordpress media folders
-  Version: 1.7.3
+  Version: 1.7.1
   Author: Richard Blythe
   Author URI: http://unity3software.com/richard-blythe
  */
+
+
 
 function _clearbase_init() {
     $wp = wp_upload_dir();
@@ -73,3 +75,8 @@ function _clearbase_init() {
 }
 
 add_action( 'init', '_clearbase_init' , 0 );
+
+if ( is_admin() ) {
+    require_once( plugin_dir_path( __FILE__ ). '/includes/assets/class-github-plugin-updater.php' );
+    new GitHubPluginUpdater( __FILE__, 'unity3software', "clearbase" );
+}
